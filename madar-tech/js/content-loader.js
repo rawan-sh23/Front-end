@@ -97,7 +97,7 @@ function renderPrograms(programs) {
         <div class="program-icon"><i class="${escapeHTML(program.icon || 'fa-solid fa-code')}"></i></div>
         <h3>${escapeHTML(program.title)}</h3>
         <p>${escapeHTML(program.description)}</p>
-        <button class="btn btn-program" data-program="${escapeHTML(program.title)}">اعرف المزيد</button>
+        <button class="btn btn-program" data-program="${escapeHTML(program.title)}" data-i18n="know_more">اعرف المزيد</button>
       </article>
     </div>
   `).join('');

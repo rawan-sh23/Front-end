@@ -1,3 +1,8 @@
+if (sessionStorage.getItem('madar_admin_logged_in') !== 'true') {
+  window.location.href = 'login.html';
+}
+
+if (sessionStorage.getItem('madar_admin_logged_in') === 'true') {
 const DEFAULT_CONTENT = {
   heroTitle: 'مساحتك للتعلم، التطور، وصناعة الفرص',
   heroDesc: 'مدار تك مؤسسة تعليمية وتدريبية في خانيونس، نعمل على توفير بيئة تساعد الطالب والخريجين والشباب على تطوير مهاراتهم، واكتساب الخبرات العملية، والانطلاق نحو فرص جديدة.',
@@ -48,7 +53,8 @@ function createField(labelText, fieldName, itemType, index, value, multiline) {
   const id = `${itemType}-${fieldName}-${index}`;
   const label = document.createElement('label');
   label.htmlFor = id;
-  label.textContent = labelText;
+  label.dataset.i18n = labelText;
+  label.textContent = window.getTranslation ? window.getTranslation(labelText) : labelText;
   const input = document.createElement(multiline ? 'textarea' : 'input');
   input.className = 'form-control';
   input.id = id;
@@ -74,17 +80,16 @@ function renderList(type) {
   items.forEach((item, index) => {
     const row = document.createElement('article');
     row.className = 'editor-item';
-    const singular = type === 'services' ? 'service' : 'program';
     row.append(
-      createField(type === 'services' ? 'اسم الخدمة' : 'اسم البرنامج', 'title', type, index, item.title, false),
-      createField('الوصف', 'description', type, index, item.description, true)
+      createField(type === 'services' ? 'service_name' : 'program_name', 'title', type, index, item.title, false),
+      createField('description', 'description', type, index, item.description, true)
     );
     const remove = document.createElement('button');
     remove.type = 'button';
     remove.className = 'delete-button';
     remove.dataset.deleteType = type;
     remove.dataset.deleteIndex = index;
-    remove.setAttribute('aria-label', `حذف ${type === 'services' ? 'الخدمة' : 'البرنامج'} ${index + 1}`);
+    remove.dataset.i18nAriaLabel = type === 'services' ? 'delete_service' : 'delete_program';
     remove.title = 'حذف';
     const icon = document.createElement('i');
     icon.className = 'fa-solid fa-trash';
@@ -93,6 +98,7 @@ function renderList(type) {
     row.append(remove);
     config.list.append(row);
   });
+  if (window.applyTranslations) window.applyTranslations(getCurrentLang());
 }
 
 function fillFields() {
@@ -125,9 +131,9 @@ function saveContent() {
 
   try {
     localStorage.setItem('madar_content', JSON.stringify(content));
-    showToast('Saved successfully');
+    showToast(getTranslation('saved_successfully'));
   } catch (error) {
-    showToast('Unable to save changes');
+    showToast(getTranslation('save_failed'));
   }
 }
 
@@ -169,3 +175,9 @@ document.querySelectorAll('.sidebar-link').forEach(link => link.addEventListener
 }));
 document.getElementById('save-button').addEventListener('click', saveContent);
 fillFields();
+
+document.getElementById('logout-button').addEventListener('click', () => {
+  sessionStorage.removeItem('madar_admin_logged_in');
+  window.location.href = 'login.html';
+});
+}

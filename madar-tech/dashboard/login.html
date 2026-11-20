@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#03213D">
+  <title data-i18n="login_title">تسجيل الدخول | مدار تك</title>
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="login-page">
+    <a class="back-link" href="../madar.html"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i><span data-i18n="back_to_site">العودة إلى الموقع</span></a>
+    <section class="login-panel" aria-labelledby="login-heading">
+      <div class="login-brand">
+        <span class="brand-mark"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
+        <span class="brand-name" data-i18n="brand_name">مدار تك</span>
+      </div>
+      <div class="login-heading">
+        <p class="eyebrow" data-i18n="admin_area">مساحة الإدارة</p>
+        <h1 id="login-heading" data-i18n="login_heading">تسجيل الدخول</h1>
+        <p data-i18n="login_description">أدخل بياناتك للوصول إلى لوحة التحكم.</p>
+      </div>
+      <form id="login-form" novalidate>
+        <div class="field-group">
+          <label for="username" data-i18n="username">اسم المستخدم</label>
+          <div class="input-wrap"><i class="fa-regular fa-user" aria-hidden="true"></i><input id="username" name="username" type="text" autocomplete="username" required autofocus></div>
+        </div>
+        <div class="field-group">
+          <label for="password" data-i18n="password">كلمة المرور</label>
+          <div class="input-wrap"><i class="fa-solid fa-lock" aria-hidden="true"></i><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+        </div>
+        <p id="login-error" class="login-error" role="alert" aria-live="assertive" hidden data-i18n="login_error">اسم المستخدم أو كلمة المرور غير صحيحة.</p>
+        <button type="submit" class="login-button"><span data-i18n="login_button">دخول</span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+      </form>
+      <div class="login-footer">
+        <button type="button" class="locale-button" data-language-toggle onclick="setLanguage(getCurrentLang() === 'ar' ? 'en' : 'ar')" aria-label="التبديل إلى اللغة الإنجليزية">EN</button>
+        <button type="button" class="theme-button" data-theme-toggle onclick="toggleTheme()" aria-label="التبديل إلى الوضع الداكن"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+      </div>
+    </section>
+    <div class="login-orbit orbit-one" aria-hidden="true"></div>
+    <div class="login-orbit orbit-two" aria-hidden="true"></div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
