@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_title">مدار تك | مساحتك للتعلم والتطور</title>
+
+  <!-- Bootstrap 5 RTL -->
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Google Fonts - Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style id="dynamic-theme"></style>
+</head>
+<body>
+
+  <!-- ===== 01 Navbar ===== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="assets/image/logo.png" alt="مدار تك" data-i18n-alt="brand_name" class="logo-img">
+          <span class="brand-text" data-i18n="brand_name">مدار تك</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" id="navToggle" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="فتح القائمة" data-i18n-aria-label="open_menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav_home">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">من نحن</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_services">خدماتنا</a></li>
+            <li class="nav-item"><a class="nav-link" href="#programs" data-i18n="nav_programs">البرامج التدريبية</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="#contact" class="btn btn-book ms-lg-2" data-i18n="book_now">احجز الآن</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== 02 Hero Section ===== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="hero-title" id="hero-title" data-i18n="hero_title" data-content-key="heroTitle">مساحتك للتعلم، التطور، وصناعة الفرص</h1>
+          <p class="hero-desc" id="hero-desc" data-i18n="hero_desc" data-content-key="heroDesc">
+            مدار تك مؤسسة تعليمية وتدريبية في خانيونس، نعمل على توفير بيئة تساعد الطالب
+            والخريجين والشباب على تطوير مهاراتهم، واكتساب الخبرات العملية، والانطلاق نحو فرص جديدة.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-lime" data-i18n="discover_services">اكتشف خدماتنا</a>
+            <a href="#contact" class="btn btn-outline-light" data-i18n="contact_us">تواصل معنا</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+          <div class="hero-shape">
+            <i class="fa-solid fa-graduation-cap hero-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 About Us ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="about-title" data-i18n="about_title" data-content-key="aboutTitle">نتعلم اليوم لنصنع فرص الغد</h2>
+        <p id="about-desc" data-i18n="about_desc" data-content-key="aboutDesc">
+          مدار تك مؤسسة تعليمية وتدريبية تسعى إلى ربط المعرفة الأكاديمية بالتطبيق العملي،
+          من خلال تقديم برامج تدريبية وأنشطة تعليمية تساعد الشباب على تطوير قدراتهم
+          ومواكبة متطلبات سوق العمل.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="info-card vision">
+            <div class="info-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3 data-i18n="vision">الرؤية</h3>
+            <p data-i18n="vision_desc">أن نكون بيئة تعليمية وتدريبية تساهم في بناء جيل يمتلك المعرفة والمهارة والقدرة على صناعة الفرص.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-card message">
+            <div class="info-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3 data-i18n="mission">الرسالة</h3>
+            <p data-i18n="mission_desc">توفير فرص تعليم وتدريب نوعية تساعد الأفراد على اكتشاف إمكاناتهم وتطوير مهاراتهم وتحويل المعرفة إلى تطبيق عملي.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 04 Services ===== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-title light">
+        <h2 data-i18n="services_title">خدماتنا</h2>
+      </div>
+
+      <div class="row g-4" id="services-container"></div>
+    </div>
+  </section>
+
+  <!-- ===== 05 Training Programs ===== -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="programs_title">طوّر مهاراتك وابدأ خطوتك القادمة</h2>
+      </div>
+
+      <div class="row g-4" id="programs-container"></div>
+    </div>
+  </section>
+
+  <!-- ===== 06 Why Madar ===== -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <div class="section-title light">
+        <h2 data-i18n="why_title">لأن بيئة التعلم تصنع فرقاً</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-seedling"></i><span data-i18n="why_environment">بيئة تعليمية محفزة</span></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-wifi"></i><span data-i18n="why_internet">إنترنت مستقر</span></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-bolt"></i><span data-i18n="why_electricity">كهرباء متوفرة</span></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-gears"></i><span data-i18n="why_practical">تدريب يجمع بين المعرفة والتطبيق</span></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-handshake"></i><span data-i18n="why_exchange">فرصة للتواصل وتبادل الخبرات</span></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-card"><i class="fa-solid fa-life-ring"></i><span data-i18n="why_support">دعم وتوجيه خلال رحلة التعلم والتطوير</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07 Contact Us ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="contact_title">خلينا نبدأ رحلتك مع بعض</h2>
+        <p data-i18n="contact_desc">عندك استفسار عن برامجنا أو خدماتنا؟ تواصل معنا، وفريق مدار تك جاهز يساعدك.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="contactForm" class="contact-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label" data-i18n="name">الاسم</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label" data-i18n="email">البريد الإلكتروني</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label" data-i18n="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label" data-i18n="message">الرسالة</label>
+                <textarea id="message" rows="4" class="form-control" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-lime btn-submit">
+                  <i class="fa-brands fa-whatsapp"></i> <span data-i18n="send_whatsapp">إرسال عبر واتساب</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08 Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <img src="assets/image/logo.png" alt="مدار تك" data-i18n-alt="brand_name" class="logo-img">
+            <span data-i18n="brand_name">مدار تك</span>
+          </div>
+          <p class="footer-about" data-i18n="footer_about">
+            مؤسسة تعليمية وتدريبية تربط المعرفة بالتطبيق العملي وتصنع فرصاً حقيقية للشباب.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h4 data-i18n="quick_links">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+            <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+            <li><a href="#programs" data-i18n="nav_programs">البرامج التدريبية</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4 data-i18n="nav_contact">تواصل معنا</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/madar_tech0" target="_blank">madar_tech0</a>
+            </li>
+            <li><i class="fa-solid fa-envelope"></i>
+              <a href="mailto:madartech1@gmail.com">madartech1@gmail.com</a>
+            </li>
+            <li><i class="fa-solid fa-location-dot"></i>
+              <span data-i18n="location">خانيونس – بجانب المحكمة الشرعية</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Madar Tech. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/972598202765" target="_blank" class="float-whatsapp" aria-label="واتساب" data-i18n-aria-label="whatsapp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/content-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
