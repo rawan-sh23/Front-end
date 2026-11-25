@@ -4,7 +4,7 @@ An integrated educational and training platform aimed at bridging academic knowl
 
 ## Implemented Features
 
-### Main Website (Landing Page)
+### Main Website
 - Responsive Design: Works seamlessly across all devices (Mobile, Tablet, Desktop) with a custom mobile hamburger menu.
 - Visual Animations: Smooth "Fade-in-up" scroll effects using IntersectionObserver, and interactive hover effects on buttons and cards.
 - Dark/Light Mode: Toggle between themes while remembering the user's preference.
